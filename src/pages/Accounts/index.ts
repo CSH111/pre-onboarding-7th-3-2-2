@@ -1,3 +1,2 @@
-export { default as Accounts } from "./Accounts";
-export { Etc } from "./Etc";
-export { Investments } from "./Investments";
+export { default as Etc } from "./Etc";
+export { default as Investment } from "./Investment";

@@ -1,4 +1,4 @@
-export { Accounts, Etc, Investments } from "./Accounts";
-export { Home } from "./Home";
-export { Login } from "./Login";
-export { Users } from "./Users";
+export { Etc, Investment } from "./accounts";
+export { default as Dashboard } from "./Dashboard";
+export { default as Login } from "./Login";
+export { default as Users } from "./Users";
