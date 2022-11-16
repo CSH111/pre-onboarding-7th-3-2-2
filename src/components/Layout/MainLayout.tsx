@@ -1,9 +1,11 @@
 import { Outlet } from "react-router-dom";
 
+import Aside from "./Aside";
+
 const MainLayout = () => {
   return (
     <div>
-      <div>사이드바</div>
+      <Aside />
       <Outlet />
     </div>
   );
