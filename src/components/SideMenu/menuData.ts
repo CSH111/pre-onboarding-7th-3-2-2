@@ -1,5 +1,7 @@
+export type TabName = "대시보드" | "계좌 목록" | "투자 계좌" | "기타 계좌" | "사용자" | "로그아웃";
+
 export interface MenuDataItem {
-  tabName: string;
+  tabName: TabName;
   path?: string; // 타입만들기
   subMenu?: MenuDataItem[];
 }

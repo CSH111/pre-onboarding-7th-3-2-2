@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
-import variables from "./variables";
+import { color } from "./variables";
 
 const GlobalStyles = createGlobalStyle`
   ${reset}
@@ -10,7 +10,8 @@ const GlobalStyles = createGlobalStyle`
     text-decoration:none;
   }
   a{
-    color:${variables.color.default}
+    /* color:${color.black}; */
+    color: inherit;
   }
 
 `;
