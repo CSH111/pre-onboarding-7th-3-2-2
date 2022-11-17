@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 
+import LoginLayout from "./components/Layout/LoginLayout";
 import MainLayout from "./components/Layout/MainLayout";
 import { Dashboard, Etc, Investment, Login, Users } from "./pages";
 
@@ -16,7 +17,9 @@ function App() {
         </Route>
         <Route path="users" element={<Users />} />
       </Route>
-      <Route path="login" element={<Login />} />
+      <Route element={<LoginLayout />}>
+        <Route path="login" element={<Login />} />
+      </Route>
     </Routes>
   );
 }

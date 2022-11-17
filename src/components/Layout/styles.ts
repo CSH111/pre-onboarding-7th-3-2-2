@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { bgColor, color } from "../../styles/variables";
-export const Container = styled.div`
+export const MainLayoutContainer = styled.div`
   min-height: 100vh;
   display: flex;
 
@@ -19,4 +19,11 @@ export const Container = styled.div`
   > :nth-child(2) {
     flex-basis: 80%;
   }
+`;
+
+export const LoginLayoutContainer = styled.div`
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

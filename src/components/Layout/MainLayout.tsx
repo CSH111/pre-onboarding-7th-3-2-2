@@ -5,10 +5,10 @@ import * as S from "./styles";
 
 const MainLayout = () => {
   return (
-    <S.Container>
+    <S.MainLayoutContainer>
       <Aside />
       <Outlet />
-    </S.Container>
+    </S.MainLayoutContainer>
   );
 };
 

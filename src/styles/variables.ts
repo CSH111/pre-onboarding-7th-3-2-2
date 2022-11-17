@@ -6,6 +6,8 @@ export const color = {
 export const bgColor = {
   darkNavy: "#041527",
   skyBlue: "#468ff7",
+  white: "white",
+  lightGray: "#f0f2f5",
 };
 
 export const margin = {

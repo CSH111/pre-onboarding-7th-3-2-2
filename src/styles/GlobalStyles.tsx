@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
-import { color } from "./variables";
+import { bgColor, color } from "./variables";
 
 const GlobalStyles = createGlobalStyle`
   ${reset}
@@ -9,6 +9,10 @@ const GlobalStyles = createGlobalStyle`
     list-style: none;
     text-decoration:none;
     box-sizing:border-box;
+  }
+  body{
+    background-color:${bgColor.lightGray};
+    min-height: 100vh;
   }
   a{
     /* color:${color.black}; */
