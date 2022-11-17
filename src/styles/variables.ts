@@ -12,3 +12,9 @@ export const margin = {
   s1: "5px",
   s2: "10px",
 };
+
+export const padding = {
+  s1: "5px",
+  s2: "10px",
+  s3: "15px",
+};

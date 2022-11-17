@@ -18,7 +18,7 @@ const SideMenu = () => {
     });
   };
 
-  console.log(menuToggleStates);
+  // console.log(menuToggleStates);
 
   useEffect(() => {
     menuData.forEach(createMenuState);

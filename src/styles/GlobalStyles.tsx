@@ -8,6 +8,7 @@ const GlobalStyles = createGlobalStyle`
   *{
     list-style: none;
     text-decoration:none;
+    box-sizing:border-box;
   }
   a{
     /* color:${color.black}; */

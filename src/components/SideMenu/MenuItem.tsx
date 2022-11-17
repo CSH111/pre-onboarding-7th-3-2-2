@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import { type MenuDataItem, type TabName } from "./menuData";
 import { MenuStateInterface } from "./SideMenu";
@@ -20,17 +20,22 @@ const MenuItem = ({
   menuToggleStates,
   setMenuToggleStates,
 }: MenuItemProps) => {
+  const { pathname } = useLocation();
   const handleToggle = (tabName: TabName) => {
     if (!setMenuToggleStates) return;
     setMenuToggleStates((state) => ({ ...state, [tabName]: !state[tabName] }));
-    console.log();
   };
   return (
     <li className={className}>
-      {!subMenu && <Link to={`${path}`}>{tabName}</Link>}
+      {!subMenu && (
+        <S.MenuItemBox active={pathname === path}>
+          {" "}
+          <Link to={`${path}`}>{tabName}</Link>
+        </S.MenuItemBox>
+      )}
       {subMenu && menuToggleStates && (
         <>
-          <S.AccordionHeader onClick={() => handleToggle(tabName)}>
+          <S.AccordionHeader className="accordionHeader" onClick={() => handleToggle(tabName)}>
             <div>{tabName}</div>
             <button>{menuToggleStates[tabName] ? "닫기" : "열기"}</button>
           </S.AccordionHeader>

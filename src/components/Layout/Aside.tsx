@@ -3,7 +3,7 @@ import { SideMenu } from "../SideMenu";
 const Aside = () => {
   return (
     <div>
-      <div>로고</div>
+      <div className="logo">로고</div>
       <SideMenu />
     </div>
   );

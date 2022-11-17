@@ -9,6 +9,12 @@ export const Container = styled.div`
     color: ${color.white};
     background-color: ${bgColor.darkNavy};
     flex-basis: 20%;
+    .logo {
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
   > :nth-child(2) {
     flex-basis: 80%;

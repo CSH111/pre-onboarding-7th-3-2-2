@@ -1,17 +1,40 @@
 import styled from "styled-components";
 
-import { margin } from "./../../styles/variables";
+import { bgColor, padding } from "./../../styles/variables";
 import { default as MenuItemComponent } from "./MenuItem";
 
 export const MenuItem = styled(MenuItemComponent)`
-  margin: ${margin.s2};
-  margin-left: calc(${({ depth }) => depth} * ${margin.s2});
+  > div {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    &:hover {
+      background-color: ${bgColor.skyBlue};
+    }
+    > a {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .accordionHeader,
+  > div > a {
+    padding: ${padding.s3};
+    padding-left: calc(${({ depth }) => depth} * ${padding.s3});
+  }
+`;
+
+export const MenuItemBox = styled.div<{ active: boolean }>`
+  transition: all 0.2s;
+  background-color: ${({ active }) => (active ? bgColor.skyBlue : "auto")};
 `;
 
 export const AccordionHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
 `;
 
 interface AccordionBodyProps {
